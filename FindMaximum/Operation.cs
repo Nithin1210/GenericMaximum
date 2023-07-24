@@ -8,7 +8,7 @@ namespace FindMaximum
 {
     public class Operation
     {
-        public void FindMaxInteger(int a, int b, int c)
+        public void FindMaxFloat(float a, float b, float c)
         {
             if (a >= b && a >= c)
                 Console.WriteLine("a is maximum");
@@ -16,7 +16,7 @@ namespace FindMaximum
                 Console.WriteLine("b is maximum");
             if (c >= a && c >= b)
                 Console.WriteLine("c is maximum");
-        }
 
+        }
     }
 }
