@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GenericFindMaximum;
+using System;
 using System.Collections.Generic;
 
 namespace FindMaximum
@@ -7,10 +8,15 @@ namespace FindMaximum
     {
         private static void Main(string[] args)
         {
-            string[] a = { "mn", "qa", "eg", "zx", "as", "qw" };
-            Operation<string> operation = new Operation<string>(a);
-            Console.WriteLine("string elements are :: mn, qa, eg, zx, as, qw ");
-            Console.WriteLine("Maximum value is : " + operation.FindMax());
+            Console.WriteLine("!! Finding the maximum !!");
+            Generic<int> max1 = new Generic<int>();
+            max1.FindMax(1, 2, 3);
+
+            Generic<float> max2 = new Generic<float>();
+            max2.FindMax(2.5f, 9.9f, 11.2f);
+
+            Generic<string> max3 = new Generic<string>();
+            max3.FindMax("spiderman", "antman", "batman");
         }
     }
 }

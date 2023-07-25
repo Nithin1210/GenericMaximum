@@ -6,19 +6,34 @@ using System.Threading.Tasks;
 
 namespace FindMaximum
 {
-    public class Operation<T> where T : IComparable
+    public class Operation
     {
-        public T[] a;
-        public Operation(T[] a)
+        public void FindMaxInteger(int a, int b, int c)
         {
-            this.a = a;
+            if (a >= b && a >= c)
+                Console.WriteLine("a is maximum");
+            if (b >= c && b >= a)
+                Console.WriteLine("b is maximum");
+            if (c >= a && c >= b)
+                Console.WriteLine("c is maximum");
         }
-
-        public T FindMax()
+        public void FindMaxFloat(float a , float b , float c)
         {
-            Array.Sort(this.a);
-            return a[^1];
+            if (a >= b && a >= c)
+                Console.WriteLine("a is maximum");
+            if (b >= c && b >= a)
+                Console.WriteLine("b is maximum");
+            if (c >= a && c >= b)
+                Console.WriteLine("c is maximum");
         }
-
+        public void FindMaxString(string a, string b, string c)
+        {
+            if (a.CompareTo(b) >= 0 && a.CompareTo(c) >= 0)
+                Console.WriteLine("a in maximum");
+            if (b.CompareTo(a) >= 0 && b.CompareTo(c) >= 0)
+                Console.WriteLine("b in maximum");
+            if (c.CompareTo(b) >= 0 && c.CompareTo(a) >= 0)
+                Console.WriteLine("c in maximum");
+        }
     }
 }
