@@ -1,16 +1,15 @@
-﻿using GenericFindMaximum;
-using System;
+﻿using System;
+using System.Collections.Generic;
+
 namespace FindMaximum
 {
-     class Program
+    public class Program
     {
-        public static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            FindMaximum<string> max = new FindMaximum<string>("asdf", "zxcv", "qwerty");
-            Console.WriteLine("asdf, zxcv, qwerty");
-            Console.WriteLine("MaxString is :" + " "+ max.MaxMethod());
-
+            string[] a = { "mn", "qa", "eg", "zx", "as", "qw" };
+            Operation<string> operation = new Operation<string>(a);
+            Console.WriteLine("Maximum value is : " + operation.FindMax());
         }
     }
-
 }
